@@ -1,0 +1,608 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Charifit</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- CSS here -->
+    <style>
+        /* Custom styles for document list page */
+     
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .document-list-section {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+       
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        a {
+            color: #28a745;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .button {
+            background-color: #28a745;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #218838;
+        }
+        .bradcam_area {
+        background-color: #000000; /* Set the background color of the bradcam area */
+        color: #ffffff; /* Set the text color to white */
+        text-align: center; /* Center-align the text */
+        padding: 100px 0; /* Add padding to center vertically */
+    }
+
+    .bradcam_area h1 {
+        font-size: 36px; /* Adjust the font size as needed */
+        color: #ffffff;
+    }
+   
+    .bradcam_area {
+        /*padding: 50px 0; */
+        padding-bottom: 0;/* Adjust the top and bottom padding as needed */
+    }
+    .genric-btn.primary {
+    background-color: #1abc9c;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.genric-btn.primary:hover {
+    background-color: #16a085;
+}
+
+.document-list-section ul li a {
+    text-decoration: none;
+    color: #1abc9c;
+    font-size: 16px; /* Adjust the font size as needed */
+    font-weight: bold;
+    margin-bottom: 10px; /* Add some space between the link and the button */
+}
+.back-button-container {
+    margin-top: 20px; /* Adjust as needed */
+    text-align: center; /* Center the button */
+}
+
+.button {
+    /* Your button styles here */
+    padding: 10px 20px;
+    background-color: #fff; /* White background color */
+    color: #28a745 !important; /* Green text color */
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #f2f2f2; /* Light grey background color on hover */
+}
+
+</style>
+
+    
+    
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/themify-icons.css">
+    <link rel="stylesheet" href="css/nice-select.css">
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/gijgo.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/slicknav.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/file input.css">
+    
+    
+</head>
+
+<body>
+
+    <header>
+        <div class="header-area ">
+            <div class="header-top_area">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-xl-6 col-md-12 col-lg-8">
+                            <div class="short_contact_list">
+                                <ul>
+                                    <li><a href="#"> <i class="fa fa-phone"></i> +1 (454) 556-5656</a></li>
+                                    <li><a href="#"> <i class="fa fa-envelope"></i>Yourmail@gmail.com</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-md-6 col-lg-4">
+                            <div class="social_media_links d-none d-lg-block">
+                                <a href="#">
+                                    <i class="fa fa-facebook"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fa fa-pinterest-p"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fa fa-linkedin"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fa fa-twitter"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="sticky-header" class="main-header-area">
+                <div class="container-fluid">
+                    <div class="row align-items-center">
+                        <div class="col-xl-3 col-lg-3">
+                            <div class="logo">
+                                <a href="index.html">
+                                    <img src="img/logo.png" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xl-9 col-lg-9">
+                            <div class="main-menu">
+                                <nav>
+                                    <ul id="navigation">
+                                        <li><a href="AdminMngPass.html">Password Manager</a></li>
+                                        <li><a href="adminhome.html">home</a></li>
+                                        <li><a href="loginForAdmin.html">Sign out</a></li>
+                                        
+                                      
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="mobile_menu d-block d-lg-none"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header-end -->
+
+<!-- bradcam_area_start -->
+<div class="bradcam_area breadcam_bg overlay d-flex align-items-center justify-content-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="row justify-content-center">
+                    <div class="col-xl-6">
+                        <h1>View Submissions</h1>
+                    </div>
+                </div>
+                <div class="row justify-content-center mt-3"> <!-- New row for the button -->
+                    <div class="col-xl-6 text-center"> <!-- Centering the button -->
+                        <div class="back-button-container">
+                            <a href="javascript:history.back()" class="button">Back</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- bradcam_area_end -->
+
+
+
+     <!-- ================ contact section start ================= -->
+ <!-- ================ contact section start ================= -->
+
+ <div class="container">
+    <div class="row">
+        <!-- Left Column -->
+        <div class="col-lg-8 mb-5 mb-lg-0">
+            <div class="posts_left_sidebar">
+                <article class="blog_item">
+                    <div class="blog_details">
+                       
+                        <a class="d-inline-block" href="#">
+                            <h2>Resala Organization</h2>
+                        </a>
+                        <p>Caring for orphans; helping the blind, the deaf,
+                            and children with special needs; blood donations; poverty alleviation; and literacy training.</p>
+                            
+                    </div>
+                  
+                </article>
+                <!-- First Row -->
+               
+                
+                <div class="row">
+                    <div class="col">
+                        <div class="media contact-info">
+                            <div class="media-body">
+                                <h3>Organisation Name</h3>
+                                <p>resala</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="media contact-info">
+                            <div class="media-body">
+                                <h3>First Name</h3>
+                                <p>resala</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="media contact-info">
+                            <div class="media-body">
+                                <h3>Last Name</h3>
+                                <p>non</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="media contact-info">
+                            <div class="media-body">
+                                <h3>Gender</h3>
+                                <p>Female</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Second Row -->
+                <div class="row">
+                    <div class="col">
+                        <div class="media contact-info">
+                            <div class="media-body">
+                                <h3>Contact Number</h3>
+                                <p>01155300503</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="media contact-info">
+                            <div class="media-body">
+                                <h3>Mail</h3>
+                                <p>resala@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="media contact-info">
+                            <div class="media-body">
+                                <h3>Organization Type</h3>
+                                <p>Non-profit</p>
+                            </div>
+                        </div>
+                    </div> <div class="col">
+                        <div class="media contact-info">
+                            <div class="media-body">
+                                <h3>password</h3>
+                                <p>1234</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Right Column -->
+        <div class="col-lg-4">
+            <div class="blog_right_sidebar">
+                <aside class="single_sidebar_widget search_widget">
+                    <div class="media contact-info">
+                        <div class="media-body">
+                            <p><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-pin-map-fill" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M3.1 11.2a.5.5 0 0 1 .4-.2H6a.5.5 0 0 1 0 1H3.75L1.5 15h13l-2.25-3H10a.5.5 0 0 1 0-1h2.5a.5.5 0 0 1 .4.2l3 4a.5.5 0 0 1-.4.8H.5a.5.5 0 0 1-.4-.8z"/>
+                                <path fill-rule="evenodd" d="M4 4a4 4 0 1 1 4.5 3.969V13.5a.5.5 0 0 1-1 0V7.97A4 4 0 0 1 4 3.999z"/>
+                            </svg></p>
+                            <h3>Nasr City, Cairo</h3>
+                            <p>2 Zaki Rostom, Al Mintaqah as Sādisah</p>
+                        </div>
+                    </div>
+                    <!-- Other contact-info items -->
+                    <section class="document-list-section" style="text-align: center;">
+                        <h2 style="font-size: 24px;">Submitted Documents</h2>
+                        <ul style="list-style-type: none; padding: 0;">
+                            <li>
+                                <a href="#" onclick="openSavedFile()" class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn" style="font-weight: normal;">Open Document</a>
+                            </li>
+                            <li>
+                                <button id="download-link" class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn" type="submit">Download Document</button>
+                            </li>
+                            <!-- Replace "path_to_document" with actual paths to your documents -->
+                            <!-- <li><a href="certificate.pdf" target="_blank">Download Document 1</a> | <a href="certificate.pdf" download>Download Document 1</a></li>
+                            <li><a href="certificate.pdf" target="_blank">Open Document 2</a> | <a href="certificate.pdf" download>Download Document 2</a></li> -->
+                            <!-- Add more list items as needed -->
+                        </ul>
+                    </section>
+                </aside>
+            </div>
+        </div>
+    </div>
+</div>
+
+                
+            
+            
+
+    <div class="container">       
+        <div class="d-none d-sm-block mb-5 pb-4">
+            <div id="map" style="height: 480px; position: relative; overflow: hidden;"></div>
+            <script>
+                function initMap() {
+                    var hospital75375 = { lat: 30.06109374711864, lng: 31.339005194062544 };
+                    var grayStyles = [
+                        {
+                            featureType: "all",
+                            stylers: [{ saturation: -90 }, { lightness: 50 }]
+                        },
+                        {
+                            elementType: 'labels.text.fill',
+                            stylers: [{ color: '#ccdee9' }]
+                        }
+                    ];
+                    var map = new google.maps.Map(document.getElementById('map'), {
+                        center: hospital75375,
+                        zoom: 15,
+                        styles: grayStyles,
+                        scrollwheel: false
+                    });
+    
+                    var marker = new google.maps.Marker({
+                        map: map,
+                        position: hospital75375,
+                        title: '75375 Hospital, Egypt'
+                    });
+                }
+            </script>
+            <!-- Load Google Maps API with your API key -->
+            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAm7gSCNpr6MHt7a4xh6-J5WrVVAWsOp20&callback=initMap"></script>
+        </div>
+    </div>
+
+
+    </div>
+<!-- ================ contact section end ================= -->
+
+
+    
+
+    <!-- JavaScript -->
+    <script>
+        
+    </script>
+   
+
+     <!-- footer_start  -->
+     <footer class="footer">
+        <div class="footer_top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-4 col-md-6 col-lg-4 ">
+                        <div class="footer_widget">
+                            <div class="footer_logo">
+                                <a href="#">
+                                    <img src="img/footer_logo.png" alt="">
+                                </a>
+                            </div>
+                            <p class="address_text">making donations easier for everyone <br> to help you create a better world,  <br> donate now and dont froget to tell your friends too
+                            </p>
+                            <div class="socail_links">
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <i class="ti-facebook"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="ti-twitter-alt"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-dribbble"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-instagram"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                   
+                    <div class="col-xl-3 col-md-6 col-lg-3">
+                        <div class="footer_widget">
+                            <h3 class="footer_title">
+                                Contacts
+                            </h3>
+                            <div class="contacts">
+                                <p>+2(305) 587-3407 <br>
+                                    info@loveuscharity.com <br>
+                                    Flat 20, Reynolds Neck, North
+                                    Helenaville, FV77 8WS
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copy-right_text">
+            <div class="container">
+                <div class="row">
+                    <div class="bordered_1px "></div>
+                    <div class="col-xl-12">
+                        <p class="copy_right text-center">
+                            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="ti-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer_end  -->
+    
+   <!-- JS here -->
+<script src="js/vendor/modernizr-3.5.0.min.js"></script>
+<script src="js/vendor/jquery-1.12.4.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/isotope.pkgd.min.js"></script>
+<script src="js/ajax-form.js"></script>
+<script src="js/waypoints.min.js"></script>
+<script src="js/jquery.counterup.min.js"></script>
+<script src="js/imagesloaded.pkgd.min.js"></script>
+<script src="js/scrollIt.js"></script>
+<script src="js/jquery.scrollUp.min.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/nice-select.min.js"></script>
+<script src="js/jquery.slicknav.min.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/plugins.js"></script>
+<script src="js/gijgo.min.js"></script>
+
+<!--contact js-->
+<script src="js/contact.js"></script>
+<script src="js/jquery.ajaxchimp.min.js"></script>
+<script src="js/jquery.form.js"></script>
+<script src="js/jquery.validate.min.js"></script>
+<script src="js/mail-script.js"></script>
+
+<script src="js/main.js"></script>
+<script>
+    $(document).ready(function(){
+        // Enable popover
+        $('[data-toggle="popover"]').popover();
+    });
+</script>
+
+
+
+
+    <!-- JavaScript -->
+    <script>
+        document.getElementById('download-link').addEventListener('click', function() {
+            var savedFileData = localStorage.getItem('savedFile');
+    
+            // Check if a file is saved
+            if (savedFileData) {
+                // Convert the Base64 string back to binary
+                var byteCharacters = atob(savedFileData.split(',')[1]);
+                var byteNumbers = new Array(byteCharacters.length);
+                for (var i = 0; i < byteCharacters.length; i++) {
+                    byteNumbers[i] = byteCharacters.charCodeAt(i);
+                }
+                var byteArray = new Uint8Array(byteNumbers);
+    
+                // Create a Blob object from the binary data
+                var blob = new Blob([byteArray], { type: 'application/pdf' });
+    
+                // Create a download link for the Blob object
+                var url = URL.createObjectURL(blob);
+                var downloadLink = document.createElement('a');
+                downloadLink.href = url;
+                downloadLink.download = 'saved-file.pdf';
+    
+                // Simulate a click on the download link to trigger the download
+                downloadLink.click();
+            } else {
+                alert('No file saved.');
+            }
+        });
+    </script>
+    
+
+    <script>
+        function openSavedFile() {
+            var savedFileData = localStorage.getItem('savedFile');
+    
+            // Check if a file is saved
+            if (savedFileData) {
+                // Convert the Base64 string back to binary
+                var byteCharacters = atob(savedFileData.split(',')[1]);
+                var byteNumbers = new Array(byteCharacters.length);
+                for (var i = 0; i < byteCharacters.length; i++) {
+                    byteNumbers[i] = byteCharacters.charCodeAt(i);
+                }
+                var byteArray = new Uint8Array(byteNumbers);
+    
+                // Create a Blob object from the binary data
+                var blob = new Blob([byteArray], { type: 'application/pdf' });
+    
+                // Create a download link for the Blob object
+                var url = URL.createObjectURL(blob);
+                var downloadLink = document.createElement('a');
+                downloadLink.href = url;
+                downloadLink.target = '_blank'; // Open in a new tab
+                downloadLink.innerText = 'Open Saved File';
+    
+                // Append the download link to the document body and simulate a click
+                document.body.appendChild(downloadLink);
+                downloadLink.click();
+    
+                // Remove the download link from the document body
+                document.body.removeChild(downloadLink);
+            } else {
+                alert('No file saved.');
+            }
+        }
+    </script>
+    
+
+
+</body>
+</html>

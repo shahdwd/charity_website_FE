@@ -1,0 +1,599 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Charifit</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <link rel="manifest" href="site.webmanifest"> -->
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/themify-icons.css">
+    <link rel="stylesheet" href="css/nice-select.css">
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/gijgo.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/slicknav.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/file input.css">
+    <!-- <link rel="stylesheet" href="css/responsive.css"> -->
+    <style>
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropbtn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 8px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            z-index: 1;
+            top: 40px;
+            /* Adjust the top position to align the dropdown content */
+            left: 0;
+            border: 1px solid #ddd;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        .dropdown-content select {
+            display: block;
+            width: 100%;
+            padding: 8px;
+            border: none;
+            border-bottom: 1px solid #ddd;
+            background-color: transparent;
+        }
+
+        .dropdown-content select:hover {
+            background-color: #f1f1f1;
+        }
+
+        .show {
+            display: block;
+        }
+    </style>
+    <style>
+        .bradcam_area {
+            min-height: 450px;
+            /* Set a minimum height to ensure it accommodates all content */
+            padding-top: 100px;
+            /* Adjust padding for top spacing */
+            padding-bottom: 100px;
+            /* Adjust padding for bottom spacing */
+        }
+
+        body {
+            font-family: font1;
+            margin: 0;
+            padding: 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: transparent;
+            margin-top: 20px;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .accept-button,
+        .reject-button,
+        .view-button,
+        .delete-button {
+            padding: 8px 16px;
+            cursor: pointer;
+            border-radius: 4px;
+            border: none;
+            outline: none;
+            transition: background-color 0.3s;
+        }
+
+        .reject-button {
+            background-color: #f44336;
+        }
+
+        .view-button,
+        .delete-button {
+            background-color: #f2f2f2;
+            color: #333;
+        }
+
+        .view-button:hover,
+        .delete-button:hover {
+            background-color: #ddd;
+        }
+
+        .organization-cell {
+            color: rgb(255, 255, 255);
+            font-style: bold;
+            font-family: font1;
+        }
+    </style>
+    <style>
+        /* Style the search bar */
+        .search-container {
+            margin-top: 80px;
+            text-align: center;
+        }
+
+        input[type=text] {
+            width: 50%;
+            padding: 10px;
+            margin: 0 auto;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type=text]:focus {
+            outline: none;
+            border-color: #007bff;
+            /* Change border color on focus */
+        }
+
+        /* Style the search button */
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+            /* Darker blue color on hover */
+        }
+        .back-button-container {
+    margin-top: 20px; /* Adjust as needed */
+    text-align: center; /* Center the button */
+}
+
+.button {
+    /* Your button styles here */
+    padding: 10px 20px;
+    background-color: #fff; /* White background color */
+    color: #28a745 !important; /* Green text color */
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #f2f2f2; /* Light grey background color on hover */
+}
+    </style>
+</head>
+
+<body>
+    <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+
+    <!-- header-start -->
+    <header>
+        <div class="header-area ">
+            <div class="header-top_area">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-xl-6 col-md-12 col-lg-8">
+                            <div class="short_contact_list">
+                                <ul>
+                                    <li><a href="#"> <i class="fa fa-phone"></i> +1 (454) 556-5656</a></li>
+                                    <li><a href="#"> <i class="fa fa-envelope"></i>Yourmail@gmail.com</a></li>
+                                  
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-md-1 col-lg-3">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="sticky-header" class="main-header-area">
+                <div class="container-fluid">
+                    <div class="row align-items-center">
+                        <div class="col-xl-3 col-lg-3">
+                            <div class="logo">
+                                <a href="index.html">
+                                    <img src="img/logo.png" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xl-9 col-lg-9">
+                            <div class="main-menu">
+                                <nav>
+                                    <ul id="navigation">
+                                        <li>
+
+
+                                        </li>
+                                        <li><a href="index.html">home</a></li>
+
+                                        <li><a href="DonorRegOrg.html">Organizations</a></li>
+
+                                        <li><a href="#">Catagories <i class="ti-angle-down"></i></a>
+                                            <ul class="submenu">
+                                                <li><a href="ClothingNeeds.html">clothes</a></li>
+                                                <li><a href="ToysRequested.html">toys</a></li>
+                                                <li><a href="FoodNeeded.html">food</a></li>
+                                                <li><a href="SchoolSuppliesNeeded.html">SchoolSupplies</a></li>
+                                                <li><a href="MedicalSuppliesWanted.html">medicalSupplies</a></li>
+                                                <li><a href="BloodDonationsNeeded.html">bloodDonation</a></li>
+                                            </ul>
+                                        </li>
+
+
+                                    </ul>
+                                </nav>
+                                <div class="Appointment">
+                                    <div class="book_btn d-none d-lg-block">
+                                        <a href="allPosts.html">Make a Donation</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="mobile_menu d-block d-lg-none"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header-end -->
+
+
+    <!-- bradcam_area_start -->
+    <div class="bradcam_area breadcam_bg overlay d-flex align-items-center justify-content-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="search-container">
+                        <form onsubmit="searchOrganization(event)">
+                            <input type="text" placeholder="Search organization by name..." id="searchInput">
+                            <!-- Filter dropdowns -->
+                            <div class="dropdown">
+                                <select id="areaFilter" onchange="updateGovernorateOptions()">
+                                    <option value="">All Areas</option>
+                                    <option value="cairo">Cairo</option>
+                                    <option value="damietta">Damietta</option>
+                                    <option value="fayoum">Fayoum</option>
+                                </select>
+                            </div>
+                            <div class="dropdown">
+                                <select id="governorateFilter" onchange="updateTypeOptions()">
+                                    <option value="">All Governorates </option>
+                                    <option value="dumiat">Dumiat</option>
+                                    <option value="cairo">Cairo</option>
+                                    <option value="giza">Giza</option>
+                                    <!-- Add options dynamically based on available governorates -->
+                                </select>
+                            </div>
+                            <div class="dropdown">
+                                <select id="typeFilter" onchange="filterTable()">
+                                    <option value="">All Types </option>
+                                    <option value="type_a">Type A</option>
+                                    <option value="type_b">Type B</option>
+                                    <option value="type_c">Type C</option>
+                                    <!-- Add options dynamically based on available types -->
+                                </select>
+                            </div>
+                            <button type="submit">Search</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center mt-3"> <!-- New row for the button -->
+                    <div class="col-xl-6 text-center"> <!-- Centering the button -->
+                        
+                    </div>
+                </div>
+            <div class="row justify-content-center mt-4">
+                <div class="col-xl-6">
+                    <div class="submission-table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Organization</th>
+                                    <th>Area</th>
+                                    <th>Governorate</th>
+                                    <th>Type</th>
+                                    <th>Organization Details</th>
+                                    
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr id="row_1">
+                                    <td class="organization-cell">1</td>
+                                    <td class="organization-cell">nahdet masr</td>
+                                    <td class="organization-cell">Cairo</td>
+                                    <td class="organization-cell">Cairo</td>
+                                    <td class="organization-cell">Type_A</td>
+                                    <td><a class="view-button" href="donorOrgDetails.html">View</a></td>
+                                    
+                                    </td>
+                                </tr>
+                                <tr id="row_2">
+                                    <td class="organization-cell">2</td>
+                                    <td class="organization-cell">masr el kheir</td>
+                                    <td class="organization-cell">Damietta</td>
+                                    <td class="organization-cell">Dumiat</td>
+                                    <td class="organization-cell">Type_B</td>
+                                    <td class="organization-cell"><a class="view-button"
+                                            href="donorOrgDetails.html">View</a></td>
+                                 
+                                    </td>
+                                </tr>
+                                <tr id="row_3">
+                                    <td class="organization-cell">3</td>
+                                    <td class="organization-cell">Om el donia</td>
+                                    <td class="organization-cell">Cairo</td>
+                                    <td class="organization-cell">Giza</td>
+                                    <td class="organization-cell">Type_C</td>
+                                    <td><a class="view-button" href="donorOrgDetails.html">View</a></td>
+                                    
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- bradcam_area_end -->
+
+
+    <script>
+        function filterTable() {
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById("searchInput").value.toUpperCase();
+            var areaFilter = document.getElementById("areaFilter").value.toUpperCase();
+            var governorateFilter = document.getElementById("governorateFilter").value.toUpperCase();
+            var typeFilter = document.getElementById("typeFilter").value.toUpperCase(); // Convert to uppercase
+            table = document.querySelector(".submission-table-container table");
+            tr = table.getElementsByTagName("tr");
+
+            // Loop through all table rows, starting from the second row (skipping the header row)
+            for (i = 1; i < tr.length; i++) {
+                tr[i].style.display = "none"; // Hide the row by default
+                td = tr[i].getElementsByTagName("td");
+                // Extract the type value from the cell content
+                var typeValue = td[4].textContent.toUpperCase().trim(); // Convert to uppercase and trim
+                // Check if any of the cells match the search query or any of the filters
+                if ((input === "" || td[1].textContent.toUpperCase().includes(input)) && // Match organization name
+                    (areaFilter === "" || td[2].textContent.toUpperCase() === areaFilter) &&
+                    (governorateFilter === "" || td[3].textContent.toUpperCase() === governorateFilter) &&
+                    (typeFilter === "" || typeValue === typeFilter)) {
+                    // If the row matches the search query and all filters, display the row
+                    tr[i].style.display = "";
+                }
+            }
+        }
+
+        // Attach event listeners to call filterTable function on input change or form submission
+        document.getElementById("searchInput").addEventListener("input", filterTable);
+        document.querySelectorAll("select").forEach(function (select) {
+            select.addEventListener("change", filterTable);
+        });
+
+        // Function to filter based on dropdown selections
+        function filterDropdown() {
+            var input, filter, table, tr, td, i, txtValue;
+            var areaFilter = document.getElementById("areaFilter").value.toUpperCase();
+            var governorateFilter = document.getElementById("governorateFilter").value.toUpperCase();
+            var typeFilter = document.getElementById("typeFilter").value.toUpperCase();
+            var table = document.querySelector(".submission-table-container table");
+            var tr = table.getElementsByTagName("tr");
+
+            // Loop through all table rows, starting from the second row (skipping the header row)
+            for (var i = 1; i < tr.length; i++) {
+                var tds = tr[i].getElementsByTagName("td");
+                // Check if the row matches the selected filters
+                if ((areaFilter === "" || tds[2].textContent.toUpperCase() === areaFilter) &&
+                    (governorateFilter === "" || tds[3].textContent.toUpperCase() === governorateFilter) &&
+                    (typeFilter === "" || tds[4].textContent.toUpperCase() === typeFilter)) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+
+        // Attach event listeners to call filter functions on input change or form submission
+        document.getElementById("searchInput").addEventListener("input", function () {
+            filterTable();
+            filterDropdown(); // Call filterDropdown after filtering search input
+        });
+        document.querySelectorAll("select").forEach(function (select) {
+            select.addEventListener("change", function () {
+                filterTable(); // Call filterTable when any dropdown changes
+                filterDropdown(); // Call filterDropdown after changing dropdown
+            });
+        });
+
+        function searchOrganization(event) {
+            event.preventDefault();
+            filterTable(); // Call filterTable function to include filter criteria
+        }
+
+        function rejectOrganization(rowId) {
+            var table = document.querySelector(".submission-table-container table tbody");
+            var row = document.getElementById("row_" + rowId);
+            if (row) {
+                table.removeChild(row);
+                updateRowNumbers(table);
+                // Additional logic for rejecting organization
+            }
+        }
+
+        function updateRowNumbers(table) {
+            var rows = table.rows;
+            for (var i = 0; i < rows.length; i++) {
+                rows[i].cells[0].innerText = i + 1;
+            }
+        }
+    </script>
+
+
+
+    <!-- footer_start  -->
+    <footer class="footer">
+        <div class="footer_top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-4 col-md-6 col-lg-4 ">
+                        <div class="footer_widget">
+                            <div class="footer_logo">
+                                <a href="#">
+                                    <img src="img/footer_logo.png" alt="">
+                                </a>
+                            </div>
+                            <p class="address_text">making donations easier for everyone <br> to help you create a
+                                better world, <br> donate now and dont froget to tell your friends too
+                            </p>
+                            <div class="socail_links">
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <i class="ti-facebook"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="ti-twitter-alt"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-dribbble"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-instagram"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-md-6 col-lg-3">
+                        <div class="footer_widget">
+                            <h3 class="footer_title">
+                                Contacts
+                            </h3>
+                            <div class="contacts">
+                                <p>+2(305) 587-3407 <br>
+                                    info@loveuscharity.com <br>
+                                    Flat 20, Reynolds Neck, North
+                                    Helenaville, FV77 8WS
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="copy-right_text">
+            <div class="container">
+                <div class="row">
+                    <div class="bordered_1px "></div>
+                    <div class="col-xl-12">
+                        <p class="copy_right text-center">
+                        <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                            Copyright &copy;
+                            <script>document.write(new Date().getFullYear());</script> All rights reserved | This
+                            template is made with <i class="ti-heart" aria-hidden="true"></i> by <a
+                                href="https://colorlib.com" target="_blank">Colorlib</a>
+                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        </p>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer_end  -->
+
+
+    <!-- JS here -->
+    <script src="js/vendor/modernizr-3.5.0.min.js"></script>
+    <script src="js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+    <script src="js/ajax-form.js"></script>
+    <script src="js/waypoints.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+    <script src="js/scrollIt.js"></script>
+    <script src="js/jquery.scrollUp.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/nice-select.min.js"></script>
+    <script src="js/jquery.slicknav.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/gijgo.min.js"></script>
+
+    <!--contact js-->
+    <script src="js/contact.js"></script>
+    <script src="js/jquery.ajaxchimp.min.js"></script>
+    <script src="js/jquery.form.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/mail-script.js"></script>
+
+    <script src="js/main.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Enable popover
+            $('[data-toggle="popover"]').popover();
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Charifit</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <link rel="manifest" href="site.webmanifest"> -->
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/themify-icons.css">
+    <link rel="stylesheet" href="css/nice-select.css">
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/gijgo.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/slicknav.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/file input.css">
+    <link rel="stylesheet" href="css/orgstyle.css">
+
+    <!-- <link rel="stylesheet" href="css/responsive.css"> -->
+    <style>
+        body {
+            font-family: font1 ;
+            margin: 0;
+            padding: 0;
+        }
+
+        .submission-table-container {
+            margin: 20px auto;
+            max-width: 800px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: transparent;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .accept-button, .reject-button, .view-button, .delete-button {
+            padding: 8px 16px;
+            cursor: pointer;
+            border-radius: 4px;
+            border: none;
+            outline: none;
+            transition: background-color 0.3s;
+        }
+
+        .accept-button, .reject-button {
+            color: #fff;
+        }
+
+        .accept-button {
+            background-color: #4CAF50;
+        }
+
+        .reject-button {
+            background-color: #f44336;
+        }
+
+        .view-button, .delete-button {
+            background-color: #f2f2f2;
+            color: #333;
+        }
+
+        .view-button:hover, .delete-button:hover {
+            background-color: #ddd;
+        }
+        .organization-cell {
+            color: rgb(255, 255, 255);
+             font-style: bold;
+             font-family: font1 ;
+        }
+        /* CSS styles for the delete account prompt */
+.delete-account-prompt {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.delete-account-prompt p {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.action-buttons {
+    display: inline-block;
+}
+
+.button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    background-color: #f44336;
+    color: #fff;
+}
+
+.button:hover {
+    background-color: #d32f2f;
+}
+
+    </style>
+</head>
+
+<body>
+
+    <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+    <!-- header-start -->
+    <header>
+        <div class="header-area ">
+            <div class="header-top_area">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-xl-6 col-md-12 col-lg-8">
+                            <div class="short_contact_list">
+                                <ul>
+                                    <li><a href="#"> <i class="fa fa-phone"></i> +1 (454) 556-5656</a></li>
+                                    <li><a href="#"> <i class="fa fa-envelope"></i>Yourmail@gmail.com</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-md-6 col-lg-4">
+                            <div class="social_media_links d-none d-lg-block">
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="sticky-header" class="main-header-area">
+                <div class="container-fluid">
+                    <div class="row align-items-center">
+                        <div class="col-xl-3 col-lg-3">
+                            <div class="logo">
+                                <a href="OrgIndexAfterDelete.html">
+                                    <img src="img/logo.png" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xl-9 col-lg-9">
+                            <div class="main-menu">
+                                <nav>
+                                    <ul id="navigation">
+
+                                        <li>
+                                            <div style="display: flex;">
+                                                <!-- First element -->
+                                                <button type="button" class="btn btn-danger" id="danger" style="height: 30px;width: 30px;"  onclick="redirectToPage()">3</button>
+                                                <div style="flex: 1;"></div>
+                                            
+                                                <!-- Second element -->
+                                                <div style="flex: 1;"></div>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="35" fill="currentColor" class="bi bi-bell-fill" viewBox="0 0 16 16" href="tableNotification.html">
+                                                    <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2m.995-14.901a1 1 0 1 0-1.99 0A5 5 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901"/>
+                                                  </svg>
+                                            </div>
+                                        
+                                    
+                                       
+                                        </li>
+                                        <li><a href="OrgIndexAfterDelete.html">home</a></li>
+                                       
+                                        <li><a href="#">Options <i class="ti-angle-down"></i></a>
+                                            <ul class="submenu">
+                                                <li><a href="EditProfile.html">Edit profile</a></li>
+                                                <li><a href="DeleteConfirm.html">Delete Profile</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </nav>
+                                <div class="Appointment">
+                                    <div class="book_btn d-none d-lg-block">
+                                        <a  href="ChooseRequestType.html">Create a request</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="mobile_menu d-block d-lg-none"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header-end -->
+    <!-- bradcam_area_start  -->
+    <div class="bradcam_area breadcam_bg overlay d-flex align-items-center justify-content-center">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-12">
+                    <!-- Delete account prompt -->
+                    <!-- Delete account prompt -->
+                    <div class="delete-account-prompt">
+                        <p>Are you sure you want to delete the account?</p>
+                        <div class="action-buttons">
+                            <a class="delete-button" href="OrgIndexAfterDelete.html" >No</a>
+                            <a class="delete-button" href="loginForAdmin.html" onclick="deleteAccount()">Delete</a>
+                        </div>
+                    </div>
+
+                    <script>
+                        function deleteAccount() {
+                            alert("Successfully Deleted Account");
+                            // Additional logic for deleting the account
+                        }
+                    </script>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- bradcam_area_end  -->
+    <script>
+        function acceptOrganization(rowId) {
+            var table = document.querySelector('.submission-table-container table tbody');
+            var row = table.querySelector('#row_' + rowId);
+            if (row) {
+                table.removeChild(row);
+                updateRowNumbers(table);
+                // Additional logic for accepting organization
+            }
+        }
+    
+        function rejectOrganization(rowId) {
+            var table = document.querySelector('.submission-table-container table tbody');
+            var row = table.querySelector('#row_' + rowId);
+            if (row) {
+                table.removeChild(row);
+                updateRowNumbers(table);
+                // Additional logic for rejecting organization
+            }
+        }
+    
+        function viewSubmissions(rowId) {
+            // Logic to view submissions for the organization at rowId
+            console.log("View submissions for organization at row:", rowId);
+        }
+    
+        function updateRowNumbers(table) {
+            var rows = table.rows;
+            for (var i = 0; i < rows.length; i++) {
+                rows[i].cells[0].innerText = i + 1;
+            }
+        }
+    </script>
+    
+    
+    
+
+    
+  
+     <!-- footer_start  -->
+     <footer class="footer">
+        <div class="footer_top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-4 col-md-6 col-lg-4 ">
+                        <div class="footer_widget">
+                            <div class="footer_logo">
+                                <a href="#">
+                                    <img src="img/footer_logo.png" alt="">
+                                </a>
+                            </div>
+                            <p class="address_text">making donations easier for everyone <br> to help you create a better world,  <br> donate now and dont froget to tell your friends too
+                            </p>
+                            <div class="socail_links">
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <i class="ti-facebook"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="ti-twitter-alt"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-dribbble"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-instagram"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                   
+                    <div class="col-xl-3 col-md-6 col-lg-3">
+                        <div class="footer_widget">
+                            <h3 class="footer_title">
+                                Contacts
+                            </h3>
+                            <div class="contacts">
+                                <p>+2(305) 587-3407 <br>
+                                    info@loveuscharity.com <br>
+                                    Flat 20, Reynolds Neck, North
+                                    Helenaville, FV77 8WS
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copy-right_text">
+            <div class="container">
+                <div class="row">
+                    <div class="bordered_1px "></div>
+                    <div class="col-xl-12">
+                        <p class="copy_right text-center">
+                            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="ti-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer_end  -->
+
+
+    <!-- JS here -->
+    <script src="js/vendor/modernizr-3.5.0.min.js"></script>
+    <script src="js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+    <script src="js/ajax-form.js"></script>
+    <script src="js/waypoints.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+    <script src="js/scrollIt.js"></script>
+    <script src="js/jquery.scrollUp.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/nice-select.min.js"></script>
+    <script src="js/jquery.slicknav.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/gijgo.min.js"></script>
+
+    <!--contact js-->
+    <script src="js/contact.js"></script>
+    <script src="js/jquery.ajaxchimp.min.js"></script>
+    <script src="js/jquery.form.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/mail-script.js"></script>
+
+    <script src="js/main.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Enable popover
+            $('[data-toggle="popover"]').popover();
+        });
+    </script>
+
+</body>
+
+</html>

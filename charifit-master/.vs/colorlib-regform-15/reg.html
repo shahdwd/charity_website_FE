@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sign Up Form by Colorlib</title>
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="fonts1/material-icon/css1/material-design-iconic-font.min.css">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="css1/style.css">
+</head>
+<body>
+
+    <div class="main">
+        <div class="container">
+            <div class="signup-content">
+                <div class="signup-img">
+                    <img src="images1/charity.jpg" alt="">
+                </div>
+                <div class="signup-form">
+                    <form method="POST" class="register-form" id="register-form">
+                        <h2>Organization registration </h2>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name"> First Name :</label>
+                                <input type="text" name="name" id="name" required/>
+                            </div>
+                            <div class="form-group">
+                                <label for="father_name">Last Name :</label>
+                                <input type="text" name="father_name" id="father_name" required/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="address">Address :</label>
+                            <input type="text" name="address" id="address" required/>
+                        </div>
+                        <div class="form-radio">
+                            <label for="gender" class="radio-label">Gender :</label>
+                            <div class="form-radio-item">
+                                <input type="radio" name="gender" id="male" checked>
+                                <label for="male">Male</label>
+                                <span class="check"></span>
+                            </div>
+                            <div class="form-radio-item">
+                                <input type="radio" name="gender" id="female">
+                                <label for="female">Female</label>
+                                <span class="check"></span>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="state">Government :</label>
+                                <div class="form-select">
+                                    <select name="state" id="state">
+                                        <option value=""></option>
+                                        <option value="us">Dakahlia</option>
+                                        <option value="uk">Cairo</option>
+                                    </select>
+                                    <span class="select-icon"><i class="zmdi zmdi-chevron-down"></i></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="city">City :</label>
+                                <div class="form-select">
+                                    <select name="city" id="city">
+                                        <option value=""></option>
+                                        <option value="losangeles">Mansoura</option>
+                                        <option value="washington">New Cairo</option>
+                                    </select>
+                                    <span class="select-icon"><i class="zmdi zmdi-chevron-down"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name"> Organization Name :</label>
+                                <input type="text" name="name" id="name" required/>
+                            </div>
+                            <div class="form-group">
+                                <label for="city">Organization Type :</label>
+                                <div class="form-select">
+                                    <select name="city" id="city">
+                                        <option value=""></option>
+                                        <option value="losangeles">Educational</option>
+                                        <option value="washington">Charity</option>
+                                    </select>
+                                    <span class="select-icon"><i class="zmdi zmdi-chevron-down"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            
+                                <label for="" class="form-label">Email</label>
+                                <input
+                                    type="email"
+                                    class="form-control"
+                                    name=""
+                                    id=""
+                                    aria-describedby="emailHelpId"
+                                    placeholder="abc@mail.com"
+                                />
+                               
+                            </div>
+                            
+                  
+                        <div class="form-group">
+                            <label for="email"><div class="mb-3">
+                                <label for="" class="form-label">Password :</label>
+                                <input
+                                    type="password"
+                                    class="form-control"
+                                    name=""
+                                    id=""
+                                    placeholder=""
+                                />
+                            </div>
+                             
+                          
+                        </div>
+                        
+      
+                        <div class="row align-items-center py-3">
+                          <div class="col-md-3 ps-5">
+            
+                           
+                            <label >Upload Verfication :</label>
+            
+                          </div>
+                          <div class="col-md-9 pe-5">
+            
+                            <input class="form-control form-control-lg" id="formFileLg" type="file" />
+                            <div class="small text-muted mt-2">Upload your accreditation or any other relevant file. Max file
+                              size 50 MB</div>
+            
+                          </div>
+                        </div>
+                        <br>
+                        <div class="col-md-3 ps-5">
+                            <div id="map" style="height: 150px;width: 150 px; position: relative; overflow: hidden;"></div>
+                            <script>
+                                function initMap() {
+                                    var uluru = {
+                                        lat: 30.044326328139753,
+                                        lng: 31.2378639760946
+                                    };
+                                    var grayStyles = [{
+                                            featureType: "all",
+                                            stylers: [{
+                                                    saturation: -90
+                                                },
+                                                {
+                                                    lightness: 50
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            elementType: 'labels.text.fill',
+                                            stylers: [{
+                                                color: '#ccdee9'
+                                            }]
+                                        }
+                                    ];
+                                    var map = new google.maps.Map(document.getElementById('map'), {
+                                        center: {
+                                            lat: 30.044326328139753,
+                                        lng: 31.2378639760946
+                                        },
+                                        zoom: 9,
+                                        styles: grayStyles,
+                                        scrollwheel: false
+                                    });
+        
+                                    var marker = new google.maps.Marker({
+                                        map: map,
+                                        position: uluru,
+                                        title: 'Your Location'
+                                    });
+                                }
+                            </script>
+                            <!-- Load Google Maps API with your API key -->
+                            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDg6N6PHme8ZJaOCsF7ZbJ3S8MPJPkqP18&callback=initMap"></script>
+        
+                            </script>
+            
+                        </div>
+                        <div class="small text-muted mt-2">choose your location on the map</div>
+                        <div class="form-submit">
+                           
+                                <input type="submit" value="Register" class="submit" name="submit" id="submit" />
+                                </a>
+                          
+                            
+                        </div>
+                        <div id="successMessage" class="alert alert-success mt-3" style="display: none;">
+                            Thank you for registering!
+                        </div>
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- JS -->
+    <script>
+        // Handle form submission
+        $('#register-form').submit(function (e) {
+            e.preventDefault(); // Prevent default form submission
+            // Perform any additional validation or processing here
+
+            // Show success message
+            $('#successMessage').slideDown().show();
+        });
+    </script>
+    <script src="vendor1/jquery/jquery.min.js"></script>
+    <script src="js1/main.js"></script>
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sign Up Form by Colorlib</title>
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="fonts1/material-icon/css1/material-design-iconic-font.min.css">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="css1/style.css">
+</head>
+<body>
+
+    <div class="main">
+        <div class="container">
+            <div class="signup-content">
+            
+                <div class="signup-img">
+                    <img src="images1/donate.jpg" alt="">
+                </div>
+                <div class="signup-form">
+                    <form method="POST" class="register-form" id="register-form">
+                        <h2>Organization registration </h2>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name"> First Name :</label>
+                                <input type="text" name="name" id="name" required/>
+                            </div>
+                            <div class="form-group">
+                                <label for="father_name">Last Name :</label>
+                                <input type="text" name="father_name" id="father_name" required/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="address">Address :</label>
+                            <input type="text" name="address" id="address" required/>
+                        </div>
+                        <div class="form-radio">
+                            <label for="gender" class="radio-label">Gender :</label>
+                            <div class="form-radio-item">
+                                <input type="radio" name="gender" id="male" checked>
+                                <label for="male">Male</label>
+                                <span class="check"></span>
+                            </div>
+                            <div class="form-radio-item">
+                                <input type="radio" name="gender" id="female">
+                                <label for="female">Female</label>
+                                <span class="check"></span>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="state">Government :</label>
+                                <div class="form-select">
+                                    <select name="state" id="state">
+                                        <option value=""></option>
+                                        <option value="us">Dakahlia</option>
+                                        <option value="uk">Cairo</option>
+                                    </select>
+                                    <span class="select-icon"><i class="zmdi zmdi-chevron-down"></i></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="city">City :</label>
+                                <div class="form-select">
+                                    <select name="city" id="city">
+                                        <option value=""></option>
+                                        <option value="losangeles">Mansoura</option>
+                                        <option value="washington">New Cairo</option>
+                                    </select>
+                                    <span class="select-icon"><i class="zmdi zmdi-chevron-down"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name"> Organization Name :</label>
+                                <input type="text" name="name" id="name" required/>
+                            </div>
+                            <div class="form-group">
+                                <label for="city">Organization Type :</label>
+                                <div class="form-select">
+                                    <select name="city" id="city">
+                                        <option value=""></option>
+                                        <option value="losangeles">Educational</option>
+                                        <option value="washington">Charity</option>
+                                        <option value="washington">Hospital</option>
+                                    </select>
+                                    <span class="select-icon"><i class="zmdi zmdi-chevron-down"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            
+                                <label for="" class="form-label">Email</label>
+                                <input
+                                    type="email"
+                                    class="form-control"
+                                    name=""
+                                    id=""
+                                    aria-describedby="emailHelpId"
+                                    placeholder="abc@mail.com"
+                                />
+                               
+                            </div>
+                            
+                  
+                        <div class="form-group">
+                            <label for="email"><div class="mb-3">
+                                <label for="" class="form-label">Password :</label>
+                                <input
+                                    type="password"
+                                    class="form-control"
+                                    name=""
+                                    id=""
+                                    placeholder=""
+                                />
+                            </div>
+                            <br>
+                            <div class="form-group">
+                                <label for="email"><div class="mb-3">
+                                    <label for="" class="form-label">Phone number :</label>
+                                    <input type="tel"  class="form-control" id="phone" placeholder="Enter your phone number" required>
+                            </div>
+                             
+                          
+                     
+                        <br>
+      
+                        <div class="row align-items-center py-3">
+                          <div class="col-md-3 ps-5">
+            
+                           
+                            <label >Upload Verfication :</label>
+            
+                          </div>
+                          <div class="col-md-9 pe-5">
+            
+                            <input class="form-control form-control-lg" id="file-input" type="file" />
+                            <div class="small text-muted mt-2">Upload your accreditation or any other relevant file. Max file
+                              size 50 MB
+                            </div>
+            
+                          </div>
+                          <p id="upload-feedback" class="feedback-msg"></p>
+                        </div>
+
+
+
+                        <br>
+                        <div class="col-md-3 ps-5">
+                            <!-- Map container -->
+                            <div id="map" style="height: 300px; width: 100%;"></div>
+
+
+                            <script>
+                                var map;
+                                var marker;
+
+                                function initMap() {
+                                    var mapOptions = {
+                                        center: {
+                                            lat: 30.044326328139753,
+                                            lng: 31.2378639760946
+                                        },
+                                        zoom: 9
+                                    };
+                                    map = new google.maps.Map(document.getElementById('map'), mapOptions);
+
+                                    // Add a click event listener to the map
+                                    map.addListener('click', function(event) {
+                                        placeMarker(event.latLng);
+                                    });
+                                }
+
+                                function placeMarker(location) {
+                                    // Remove existing marker if it exists
+                                    if (marker) {
+                                        marker.setMap(null);
+                                    }
+
+                                    // Add a new marker at the clicked location
+                                    marker = new google.maps.Marker({
+                                        position: location,
+                                        map: map
+                                    });
+                                }
+
+                            </script>
+                            <!-- Load Google Maps API with your API key -->
+                            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAm7gSCNpr6MHt7a4xh6-J5WrVVAWsOp20&callback=initMap"></script>
+        
+                            
+            
+                        </div>
+                        <div class="small text-muted mt-2">choose your location on the map</div>
+                        <br>
+                        <div class="form-submit">
+                          
+                                <input type="submit" onclick="saveFile()" value="Register" class="submit" name="submit" id="submit" />
+                                
+                           
+                            
+                        </div>
+                        <br>
+                        <div id="successMessage" class="alert alert-success mt-3" style="display: none; font-size: larger;">
+                            Thank you for registering!
+                        </div>
+                        <br>
+                        <li><a href="loginForAdmin.html" style="font-size: larger; color: #24352e;">Sign in </a></li>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- JS -->
+    <script src="vendor1/jquery/jquery.min.js"></script>
+    <script src="js1/main.js"></script>
+
+    <!-- JavaScript -->
+    <script>
+        function saveFile() {
+            var fileInput = document.getElementById('file-input');
+            var file = fileInput.files[0];
+    
+            // Check if a file is selected
+            if (file) {
+                // Read the file as a data URL
+                var reader = new FileReader();
+                reader.onload = function(event) {
+                    // Save the file data as a Base64 string in localStorage
+                    localStorage.setItem('savedFile', event.target.result);
+                    alert('File saved successfully!');
+                };
+                reader.readAsDataURL(file);
+            } else {
+                alert('Please select a file first.');
+            }
+        }
+    </script>
+    
+
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>

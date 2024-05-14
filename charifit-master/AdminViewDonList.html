@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Charifit</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <link rel="manifest" href="site.webmanifest"> -->
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/themify-icons.css">
+    <link rel="stylesheet" href="css/nice-select.css">
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/gijgo.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/slicknav.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/file input.css">
+    <!-- <link rel="stylesheet" href="css/responsive.css"> -->
+   <style> 
+        body {
+    font-family: font1;
+    margin: 0;
+    padding: 0;
+}
+.submission-table-container {
+    margin-left: 200px; /* Shift the table to the right by pushing it to the right margin */
+    margin-right: 300px; /* Shift the table to the right by pushing it to the right margin */
+}
+
+
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: transparent;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+.accept-button, .reject-button, .view-button, .delete-button {
+    padding: 8px 16px; /* Ensure equal padding for all buttons */
+    cursor: pointer;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    transition: background-color 0.3s;
+}
+
+.accept-button, .reject-button {
+    color: #fff;
+}
+
+.accept-button {
+    background-color: #4CAF50;
+}
+
+.reject-button {
+    background-color: #f44336;
+}
+
+.view-button, .delete-button {
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+.view-button:hover, .delete-button:hover {
+    background-color: #ddd;
+}
+
+.organization-cell {
+    color: rgb(255, 255, 255);
+    font-style: bold;
+    font-family: font1;
+}
+</style>
+</head>
+
+<body>
+
+    <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+    <!-- header-start -->
+    <header>
+        <div class="header-area ">
+            <div class="header-top_area">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-xl-6 col-md-12 col-lg-8">
+                            <div class="short_contact_list">
+                                <ul>
+                                    <li><a href="#"> <i class="fa fa-phone"></i> +1 (454) 556-5656</a></li>
+                                    <li><a href="#"> <i class="fa fa-envelope"></i>Yourmail@gmail.com</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-md-6 col-lg-4">
+                            <div class="social_media_links d-none d-lg-block">
+                                <a href="#">
+                                    <i class="fa fa-facebook"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fa fa-pinterest-p"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fa fa-linkedin"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fa fa-twitter"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="sticky-header" class="main-header-area">
+                <div class="container-fluid">
+                    <div class="row align-items-center">
+                        <div class="col-xl-3 col-lg-3">
+                            <div class="logo">
+                                <a href="index.html">
+                                    <img src="img/logo.png" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xl-9 col-lg-9">
+                            <div class="main-menu">
+                                <nav>
+                                    <ul id="navigation">
+                                        <li><a href="AdminMngPass.html">Password Manager</a></li>
+                                        <li><a href="adminhome.html">home</a></li>
+                                        <li><a href="loginForAdmin.html">Sign out</a></li>
+                                        
+                                      
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="mobile_menu d-block d-lg-none"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header-end -->
+    <!-- bradcam_area_start  -->
+    <div class="bradcam_area breadcam_bg overlay d-flex align-items-center justify-content-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="row">
+                        <div class="col-xl-6">
+                            <div class="bradcam_area d-flex align-items-center justify-content-center">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-xl-12">
+                                            <div class="submission-table-container">
+                                                <table>
+                                                    <thead>
+                                                        <tr>
+                                                            <th>#</th>
+                                                            <th>Donor</th>
+                                                            <th>Donate As</th>
+                                                            <th>Select an organization</th>
+                                                            <th>Accept</th>
+                                                            <th>Reject</th>
+                                                            <th>View Submissions</th>
+
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr id="row_1">
+
+                                                            <td class="organization-cell">1</td>
+                                                            <td class="organization-cell">Ali</td>
+                                                            <td class="organization-cell" style="color: white;">Doctor</td>
+                                                            <td> <select class="nice-select">
+                                                                <option value="Organization A">Organization A</option>
+                                                                <option value="Organization B">Organization B</option>
+                                                                <option value="Organization C">Organization C</option>
+                                                              </select>
+                                                            </td>
+                                                            <td><button class="accept-button" onclick="acceptOrganization(1)">Accept</button></td>
+                                                            <td><button class="reject-button" onclick="rejectOrganization(1)">Reject</button></td>
+                                                            <td><a class="view-button" href="AdminViewDoctorDoc.html">View</a></td>
+
+                                                        </tr>
+                                                        <tr id="row_2">
+
+                                                            <td class="organization-cell">2</td>
+                                                            <td class="organization-cell">Muhammed</td>
+                                                            <td class="organization-cell" style="color: white;">Teacher</td>
+                                                            <td> <select class="nice-select">
+                                                                <option value="Organization A">Organization A</option>
+                                                                <option value="Organization B">Organization B</option>
+                                                                <option value="Organization C">Organization C</option>
+                                                              </select>
+                                                            </td>
+                                                            <td><button class="accept-button" onclick="acceptOrganization(2)">Accept</button></td>
+                                                            <td><button class="reject-button" onclick="rejectOrganization(2)">Reject</button></td>
+                                                            <td><a class="view-button" href="AdminViewTeacherDoc.html">View</a></td>
+                                                        </tr>
+                                                        <tr id="row_3">
+                                                            <td class="organization-cell">3</td>
+                                                            <td class="organization-cell">Mazen</td>
+                                                            <td class="organization-cell" style="color: white;">Doctor</td>
+                                                            <td> <select class="nice-select">
+                                                                <option value="Organization A">Organization A</option>
+                                                                <option value="Organization B">Organization B</option>
+                                                                <option value="Organization C">Organization C</option>
+                                                              </select>
+                                                            </td>
+                                                            <td><button class="accept-button" onclick="acceptOrganization(3)">Accept</button></td>
+                                                            <td><button class="reject-button" onclick="rejectOrganization(3)">Reject</button></td>
+                                                            <td><a class="view-button" href="AdminViewDoctorDoc.html">View</a></td>
+
+                                                        </tr>
+                                                        <tr>
+
+                                                        </tr>
+                                                        
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- bradcam_area_end  -->
+    <script>
+        function acceptOrganization(rowId) {
+            var table = document.querySelector('.submission-table-container table tbody');
+            var row = table.querySelector('#row_' + rowId);
+            if (row) {
+                table.removeChild(row);
+                updateRowNumbers(table);
+                // Additional logic for accepting organization
+            }
+        }
+    
+        function rejectOrganization(rowId) {
+            var table = document.querySelector('.submission-table-container table tbody');
+            var row = table.querySelector('#row_' + rowId);
+            if (row) {
+                table.removeChild(row);
+                updateRowNumbers(table);
+                // Additional logic for rejecting organization
+            }
+        }
+    
+        function viewSubmissions(rowId) {
+            // Logic to view submissions for the organization at rowId
+            console.log("View submissions for organization at row:", rowId);
+        }
+    
+        function updateRowNumbers(table) {
+            var rows = table.rows;
+            for (var i = 0; i < rows.length; i++) {
+                rows[i].cells[0].innerText = i + 1;
+            }
+        }
+    </script>
+    
+    
+    
+
+    
+
+
+    <!-- JS here -->
+    <script src="js/vendor/modernizr-3.5.0.min.js"></script>
+    <script src="js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+    <script src="js/ajax-form.js"></script>
+    <script src="js/waypoints.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+    <script src="js/scrollIt.js"></script>
+    <script src="js/jquery.scrollUp.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/nice-select.min.js"></script>
+    <script src="js/jquery.slicknav.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/gijgo.min.js"></script>
+
+    <!--contact js-->
+    <script src="js/contact.js"></script>
+    <script src="js/jquery.ajaxchimp.min.js"></script>
+    <script src="js/jquery.form.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/mail-script.js"></script>
+
+    <script src="js/main.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Enable popover
+            $('[data-toggle="popover"]').popover();
+        });
+    </script>
+
+</body>
+
+</html>
